@@ -25,7 +25,7 @@ export default function HomePage() {
           </Text>
         </View>
         <View style={s.body2}>
-          <Image source={require("@/assets/images/react-logo.png")} />
+          <Image source={require("@/assets/images/logo.png")} />
         </View>
         <View style={s.body2}>
           <TouchableOpacity style={s.btn} onPress={visit}>
