@@ -1,23 +1,19 @@
-import dados from "@/assets/constants/mock";
+import dados from "@/assets/constants/mock2";
 import { Header } from "@/components/header";
 import { Item } from "@/components/item";
 import { router } from "expo-router";
 import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    FlatList,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function List() {
   const voltar = () => {
-    router.push("/");
-  };
-
-  const proximo = () => {
-    router.push("/list2");
+    router.push("/list");
   };
 
   return (
@@ -26,10 +22,6 @@ export default function List() {
       <View>
         <TouchableOpacity onPress={voltar}>
           <Text style={s.backBtn}>⬅️</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={proximo}>
-          <Text style={s.nextBtn}>➡️</Text>
         </TouchableOpacity>
       </View>
       <SafeAreaView style={s.wrapList}>
@@ -56,11 +48,6 @@ const s = StyleSheet.create({
   backBtn: {
     fontSize: 40,
     position: "absolute",
-    top: -400,
-  },
-  nextBtn: {
-    fontSize: 40,
-    position: "absolute",
-    top: -350,
+    top: -52,
   },
 });
